@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="css/paintcss.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+		
+	<canvas	 id="myCanvas" width="590" height="290"></canvas>
+		<div class="controls">
+           <div id="buttons">
+               <input type="button" id="clear" value="Clear">
+          </div>
+		     
+			<ul>
+
+					<li class="red selected"></li>
+					<li class="blue"></li>
+					<li class="yellow"></li>
+
+			</ul>
+				<button id="revealColorSelect">New Color</button>
+				<div id="colorSelect"> <span id="newColor"></span>
+				<div class="sliders">
+		     <p>
+			<label for="red">Red</label>
+			<input id="red" name="red" type="range" min=0 max=255 value=0>
+			</p>
+			<p>
+			<label for="green">Green</label>
+			<input id="green" name="green" type="range" min=0 max=255 value=0>
+			</p>
+			<p>
+			<label for="blue">Blue</label>
+			<input id="blue" name="blue" type="range" min=0 max=255 value=0>
+			</p>
+			</div>
+				<div>
+				   <button id="addNewColor">Add Color</button>
+				</div>
+			</div>
+		</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/paintjs.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+</body>
+</html>

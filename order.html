@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Planets Quiz</title>
+
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/ordercss.css">
+
+
+</head>
+
+<body>
+
+<div class="menu">
+	<div class="menu-bar" onclick="myFunction(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+	</script>
+
+	<div class="nav">
+		<nav>
+			<ul>
+				<li class="link"><a href="paint.html"><i class="fa fa-universal-access"></i></a></li>
+				<li class="link"><a href="order.html"><i class="fa fa-rocket"></i></a></li>
+				<li class="link"><a href="gameDrag.html"><i class="fa fa-spinner"></i></a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+<div class='planets'>
+	<div class='planets-background'></div>
+	<div class='planets-container'>
+		<div class='planets_container-title'>
+			<h3>Drag the planets into the correct Size</h3>
+		</div>
+		<div class='planets-container-planets'>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='venus'>
+					<img src='img/iconVenus.png'>
+				</div>
+				<span>Venus</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='earth'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_earth.png'>
+				</div>
+				<span>Earth</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='saturn'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_saturn.png'>
+				</div>
+				<span>Saturn</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='neptune'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_neptune.png'>
+				</div>
+				<span>Neptune</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='mercury'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mercury.png'>
+				</div>
+				<span>Mercury</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='mars'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mars.png'>
+				</div>
+				<span>Mars</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='jupiter'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_jupiter.png'>
+				</div>
+				<span>Jupiter</span>
+			</div>
+			<div class='planet-wrap'>
+				<div class='planet' data-planet='uranus'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_uranus.png'>
+				</div>
+				<span>Uranus</span>
+			</div>
+		</div>
+		<div class='planets-container-quiz'>
+			<div class='planet-holder sun null' data-planet='sun'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_sun.png'>
+				</div>
+			</div>
+			<div class='planet-holder mercury' data-planet='mercury'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mercury.png'>
+				</div>
+			</div>
+			<div class='planet-holder venus' data-planet='venus'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='img/iconVenus.png'>
+				</div>
+			</div>
+			<div class='planet-holder earth' data-planet='earth'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_earth.png'>
+				</div>
+			</div>
+			<div class='planet-holder mars' data-planet='mars'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mars.png'>
+				</div>
+			</div>
+			<div class='planet-holder jupiter' data-planet='jupiter'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_jupiter.png'>
+				</div>
+			</div>
+			<div class='planet-holder saturn' data-planet='saturn'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_saturn.png'>
+				</div>
+			</div>
+			<div class='planet-holder uranus' data-planet='uranus'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_uranus.png'>
+				</div>
+			</div>
+			<div class='planet-holder neptune' data-planet='neptune'>
+				<span>?</span>
+				<div class='planet-answer'>
+					<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_neptune.png'>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script>$('#widget').draggable();</script>
+
+<script  src="js/orderjs.js"></script>
+
+</body>
+</html>

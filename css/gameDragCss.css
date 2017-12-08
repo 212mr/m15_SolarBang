@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding:0;
+    font-size: 100%;
+}
+
+
+
+body{
+    background-size: cover;
+    background-image: url("../img/background_ab.png");
+}
+
+li{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+}
+
+.menu-bar{
+    margin-left:20px;
+    margin-top:10px;
+    display: inline-block;
+    cursor: pointer;
+    float:left;
+    /*position: absolute;*/
+    /*background-color: rgba(1, 1, 65, 0.6);*/
+    z-index: 9;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav {
+    display: none;
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 20px;
+    z-index: 9;
+    float: right;
+}
+
+.nav a{
+    color: white;
+}
+
+.nav a:hover{
+    color: #0201c2;
+}
+
+nav{
+    /*display: none;*/
+    color: white;
+    font-size: 3em;
+}
+
+#refreshBtn{
+    color: white;
+    font-size: 2.6em;
+    position: absolute;
+    bottom:10px;
+    left:22px;
+}
+
+#refreshBtn a{
+    color: white;
+}
+
+#refreshBtn a:hover {
+    color: #0201c2;
+}
+
+
+.element{
+    width: calc(100% - 400px);
+    display: inline-block;
+    /*background-color: #6A845F;*/
+    margin: 0;
+    color: white;
+}
+
+#circle-orbit-container{
+    top:0;
+    left:0;
+    position: absolute;
+    display: inline-block;
+}
+
+
+.two, .three, .four, .five, .six, .seven, .eight, .nine{
+    width: 20%;
+    display: inline-block;
+    border-radius: 100%;
+    /*background-color: red;*/
+    margin: 16px auto;
+}
+
+.two img{
+    width:100%;
+}
+
+.three img{
+    width:100%;
+}
+
+.four img{
+    width:100%;
+}
+
+.five img{
+    width:100%;
+}
+
+.six img{
+    width:100%;
+}
+
+.seven img{
+    width:100%;
+}
+
+.eight img{
+    width:100%;
+}
+
+.nine img{
+    width:100%;
+}
+
+
+
+.mercury{
+    background-image: url("../img/iconMercury.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.venus{
+    background-image: url("../img/iconVenus.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.earth{
+    background-image: url("../img/iconEarth.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.mars{
+    background-image: url("../img/iconMars.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.jupiter{
+    background-image: url("../img/iconJupiter.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.saturn{
+    background-image: url("../img/iconSaturn.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.uranus{
+    background-image: url("../img/iconUranus.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.neptune{
+    background-image: url("../img/iconNeptune.png");
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+
+/* ---------- Container for the orbiting circles animation ---------- */
+#circle-orbit-container {
+    position: relative;
+    top: 10px;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    color: rgba(0,0,255,1)
+}
+
+.onePlanet {
+    position: absolute;
+    top: 62px;
+    left: -6px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: solid 1px red;
+    z-index: 11;
+}
+
+
+.twoPlanet {
+    position: absolute;
+    top: -10px;
+    left: 27px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,0.45);
+    z-index: 11;
+}
+
+.threePlanet {
+     position: absolute;
+     top: 45px;
+     left: -10px;
+     height: 20px;
+     width: 20px;
+     border-radius: 100%;
+     border: solid 1px rgba(0,0,255,0.35);
+     z-index: 11;
+ }
+
+.fourPlanet {
+    position: absolute;
+    top: -10px;
+    left: 63px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,0.45);
+    z-index: 11;
+}
+
+
+.fivePlanet {
+    position: absolute;
+    top: -10px;
+    left: 81px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,0.55);
+    z-index: 11;
+}
+
+.sixPlanet {
+    position: absolute;
+    top: 99px;
+    left: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,0.65);
+    z-index: 11;
+}
+
+
+.sevenPlanet {
+    position: absolute;
+    top: 117px;
+    left: 214px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,1);
+    z-index: 11;
+}
+
+
+.eightPlanet {
+    position: absolute;
+    top: -10px;
+    left: 135px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,0.75);
+    z-index: 11;
+}
+
+.ninePlanet {
+    position: absolute;
+    top: 135px;
+    left: 300px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: solid 1px rgba(0,0,255,0.45);
+    z-index: 11;
+}
+
+/* - ORBIT orbit ORBIT orbit ORBIT orbit ORBIT orbit ORBIT orbit ORBIT orbit - */
+
+#oneOrbit {
+    position: absolute;
+    top: 142px;
+    left: 142px;
+    width: 26px;
+    height: 26px;
+    border:none;
+    border-radius: 100%;
+    -webkit-animation: spin-right 8s linear infinite;
+    animation: spin-right 8s linear infinite;
+    z-index: 10;
+}
+
+
+#twoOrbit {
+    position: absolute;
+    top: 126px;
+    left: 126px;
+    width: 54px;
+    height: 54px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+    z-index: 9;
+}
+
+
+#threeOrbit {
+    position: absolute;
+    top: 108px;
+    left: 108px;
+    width: 90px;
+    height: 90px;
+    border: 1px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 24s linear infinite;
+    animation: spin-right 24s linear infinite;
+    z-index: 8;
+}
+
+
+
+#fourOrbit{
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    width: 126px;
+    height: 126px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    box-shadow: 2px 2px 90px 60px rgba(239, 13, 50, 0.2);
+    -webkit-animation: spin-right 14s linear infinite;
+    animation: spin-right 14s linear infinite;
+    background-color: rgba(239, 13, 50, 0.2);
+
+    z-index: 7;
+}
+
+#fiveOrbit{
+    position: absolute;
+    top: 72px;
+    left: 72px;
+    width: 162px;
+    height: 162px;
+    border: 1px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 36s linear infinite;
+    animation: spin-right 36s linear infinite;
+    /*background-color: rgba(5, 60, 165, 0.1);*/
+    z-index: 6;
+}
+
+
+#sixOrbit{
+    position: absolute;
+    top: 54px;
+    left: 54px;
+    width: 198px;
+    height: 198px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 30s linear infinite;
+    animation: spin-right 24s linear infinite;
+    background-color: rgba(5, 60, 165, 0.1);
+    z-index: 5;
+}
+
+
+#sevenOrbit{
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    width: 234px;
+    height: 234px;
+    border: 1px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 28s linear infinite;
+    animation: spin-right 28s linear infinite;
+    /*background-color: rgba(5, 60, 165, 0.1);*/
+    z-index: 4;
+}
+
+#eightOrbit{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 270px;
+    height: 270px;
+    border: 2px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 24s linear infinite;
+    animation: spin-right 24s linear infinite;
+    background-color: rgba(5, 60, 165, 0.2);
+    z-index: 3;
+}
+
+#nineOrbit{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 306px;
+    height: 306px;
+    border: 1px #4A437F dashed;
+    border-radius: 100%;
+    -webkit-animation: spin-right 36s linear infinite;
+    animation: spin-right 36s linear infinite;
+    background-color: rgba(5, 60, 165, 0.2);
+    z-index: 2;
+}
+
+
+
+/* ---------- Animation ---------- */
+@-webkit-keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

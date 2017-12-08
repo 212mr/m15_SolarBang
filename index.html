@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solar BANG!</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <link rel="icon" href="img/iconSaturn.png">
+    <link href="css/indexcss.css" rel="stylesheet"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Fredericka+the+Great|Sacramento" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+   <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+            integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+            crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDm5KUfqvj0dWxWxo_cIdBs_9yMH6hgXvE",
+            authDomain: "class7-4619d.firebaseapp.com",
+            databaseURL: "https://class7-4619d.firebaseio.com",
+            projectId: "class7-4619d",
+            storageBucket: "class7-4619d.appspot.com",
+            messagingSenderId: "324798468064"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script type="text/javascript" src="js/indexjs.js"></script>
+</head>
+<body>
+
+<div class="top">
+    <div class="menu-bar" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li class="link"><a href="paint.html"><i class="fa fa-universal-access"></i></a></li>
+                <li class="link"><a href="order.html"><i class="fa fa-rocket"></i></a></li>
+                <li class="link"><a href="gameDrag.html"><i class="fa fa-spinner"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="login" align="center">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+        <div id="id01" class="modal" align="left">
+            <div class="modal-content animate" action="">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+                </div>
+        <br>
+                <div class="log-box" align="center">
+                    <!--<input type="text" id="form-username" class="form-control" placeholder="Username">-->
+                    <input type="email" id="form-email" class="form-control" placeholder="Enter Email">
+                    <input type="password" id="form-password" class="form-control" placeholder="Password">
+                    <!--<input type="checkbox" checked="checked" class="remember">Remember Me-->
+                    <br>
+
+
+                    <input type="submit" id="signin" value="Sign In" onClick="handleSignIn()">
+                    <br>
+
+                    <input type="submit" id="facebook" value="Sign in with Facebook" onClick="handleFBLogin()">
+                    <input type="submit" id="signup" value="Create a new account" onclick="handleSignUp()">
+                    <br>
+                    <input type="submit" id="signout" value="Sign Out" onClick="handleSignOut()">
+                    <!--<span class="psw">Forgot <a href="#">password?</a> &nbsp;</span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="space">
+    <div class="ba-slider">
+        <img src="img/space9_org_red.png" alt="space9_org">
+        <div class="resize">
+            <img src="img/Space9_BIG.png" alt="space9_edit">
+        </div>
+        <span class="handle"></span>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

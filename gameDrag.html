@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameDrag</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <link href="css/gameDragCss.css" rel="stylesheet"/>
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Fredericka+the+Great|Sacramento" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="menu">
+    <div class="menu-bar" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li class="link"><a href="paint.html"><i class="fa fa-universal-access"></i></a></li>
+                <li class="link"><a href="order.html"><i class="fa fa-rocket"></i></a></li>
+                <li class="link"><a href="gameDrag.html"><i class="fa fa-spinner"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="refresh">
+    <ul>
+        <li>
+            <a href=""><i id="refreshBtn" class="fa fa-rotate-right"></i></a>
+        </li>
+    </ul>
+
+
+</div>
+
+<div id="circle-orbit-container">
+    <div id="oneOrbit" align="center">
+        <img src="img/theSun.png" alt="sun" style="width: 100%">
+    </div>
+
+    <div id="twoOrbit">
+        <div class="twoPlanet" align="center">2</div>
+    </div>
+
+    <div id="threeOrbit">
+        <div class="threePlanet" align="center">3</div>
+    </div>
+
+    <div id="fourOrbit">
+        <div class="fourPlanet" align="center">4</div>
+    </div>
+
+    <div id="fiveOrbit">
+        <div class="fivePlanet" align="center">5</div>
+    </div>
+
+    <div id="sixOrbit">
+        <div class="sixPlanet" align="center">6</div>
+    </div>
+
+    <div id="sevenOrbit">
+        <div class="sevenPlanet" align="center">7</div>
+    </div>
+
+    <div id="eightOrbit">
+        <div class="eightPlanet" align="center">8</div>
+    </div>
+
+    <div id="nineOrbit">
+        <div class="ninePlanet" align="center">9</div>
+    </div>
+</div>
+
+<div class="element" align="right">
+    <div class="two"> <img src="img/iconMercury.png" alt="Mercury">Mercury</div>
+    <div class="three"><img src="img/iconVenus.png" alt="Mercury">Venus</div>
+    <div class="four"><img src="img/iconEarth.png" alt="Mercury">Earth</div>
+    <div class="five"><img src="img/iconMars.png" alt="Mercury">Mars</div>
+    <div class="six"><img src="img/iconJupiter.png" alt="Mercury">Jupiter</div>
+    <div class="seven"><img src="img/iconSaturn.png" alt="Mercury">Saturn</div>
+    <div class="eight"><img src="img/iconUranus.png" alt="Mercury">Uranus</div>
+    <div class="nine"><img src="img/iconNeptune.png" alt="Mercury">Neptune</div>
+</div>
+
+
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<button><a href="order.html">Game One: Rank the planets by size order</a></button>-->
+<!--<br>-->
+<!--<button><a href="paint.html">Game Two: Paint your own planets</a></button>-->
+
+<!--<br>-->
+<!--<hr>-->
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+        integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+        crossorigin="anonymous"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script>$('#widget').draggable();</script>
+<script type="text/javascript" src="js/gameDragJs.js"></script>
+
+</body>
+</html>
+
+<!--https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js-->

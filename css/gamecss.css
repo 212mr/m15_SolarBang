@@ -1,0 +1,203 @@
+/* ---------- Container for the orbiting circles animation ---------- */
+
+
+.onePlanet{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: red;
+    z-index:99;
+}
+
+.twoPlanet{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: #0647c2;
+    z-index:99;
+}
+
+.threePlanet{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: rgba(209, 197, 22, 0.4);
+    z-index:99;
+}
+
+.pos{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+
+.purple{
+    background-color: mediumpurple;
+}
+
+.red{
+    background-color: orangered;
+}
+
+#circle-orbit-container {
+    position: relative;
+    top: 80px;
+    left: 0;
+    height: 300px;
+    width: 300px;
+}
+
+/* ---------- Inner orbit - This is the circles closest to the central point ---------- */
+#oneOrbit {
+    position: absolute;
+    top: 72px;
+    left: 72px;
+    width: 150px;
+    height: 150px;
+    border: 2px #43410e dashed;
+    background-color: rgba(150, 144, 31, 0.4);
+    border-radius: 100%;
+    -webkit-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+    z-index: 50;
+}
+
+/* ---------- Repeating styles for the inner orbiting circles ---------- */
+.oneBall {
+    position: absolute;
+    top: 62px;
+    left: -6px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: #96901f;
+}
+
+/* ---------- Middle orbit - This is the circles second closest to the central point ---------- */
+#twoOrbit {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 225px;
+    height: 225px;
+    border: 2px #4A437F dashed;
+    /*border-radius: 100%;*/
+    -webkit-animation: spin-right 15s linear infinite;
+    animation: spin-right 15s linear infinite;
+    z-index: 49;
+    background-color: orange;
+}
+
+/* ---------- Repeating styles for the inner orbiting circles ---------- */
+.twoBall {
+    position: absolute;
+    top: 25px;
+    left: 17px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: #4A437F;
+}
+
+/* ---------- Outer orbit - This is the circles furthest away from the central point ---------- */
+#threeOrbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 294px;
+    height: 294px;
+    border: 2px #4A437F dashed;
+    /*border-radius: 100%;*/
+    -webkit-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+    background-color: greenyellow;
+    z-index: 48;
+}
+
+/* ---------- Repeating styles for the outer orbiting circles ---------- */
+.threeBall {
+    position: absolute;
+    top: -17px;
+    left: 125px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #00FFCA;
+}
+
+/* ---------- Animation ---------- */
+@-webkit-keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/*以中间点为圆心旋转*/
+.saturn {
+    border-radius: 100%;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    /*
+     * Make the initial position to be the center of the circle you want this
+     * object follow.
+     */
+    position: absolute;
+    left: 150px;
+    top: 150px;
+
+    /*
+     * Sets up the animation duration, timing-function (or easing)
+     * and iteration-count. Ensure you use the appropriate vendor-specific
+     * prefixes as well as the official syntax for now. Remember, tools like
+     * CSS Please are your friends!
+     */
+    -webkit-animation: myOrbit 18s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: myOrbit 18s linear infinite; /* Firefox 5-15 */
+    -o-animation: myOrbit 18s linear infinite; /* Opera 12+ */
+    animation: myOrbit 18s linear infinite; /* Chrome, Firefox 16+,
+                                                      IE 10+, Safari 5 */
+
+
+
+}
+
+/*
+ * Set up the keyframes to actually describe the begining and end states of
+ * the animation.  The browser will interpolate all the frames between these
+ * points.  Again, remember your vendor-specific prefixes for now!
+ */
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+    from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-o-keyframes myOrbit {
+    from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
