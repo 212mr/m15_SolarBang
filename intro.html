@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Solar BANG!</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <link rel="icon" href="img/iconSaturn.png">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Fredericka+the+Great|Sacramento" rel="stylesheet">
+    <link href="css/intro.css" rel="stylesheet"/>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+            integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+            crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<!--<div class="top">-->
+    <div class="menu-bar" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li class="link"><a href="intro.html"><i class="fa fa-list-alt"></i></a></li>
+                <li class="link"><a href="paint2.html"><i class="fa fa-edit"></i></a></li>
+                <li class="link"><a href="order.html"><i class="fa fa-spinner"></i></a></li>
+                <li class="link"><a href="gameDrag.html"><i class="fa fa-bullseye"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script >
+        $(document).ready(function () {
+            $("div.menu-bar").click(function () {
+                $("div.nav").toggle("slide");
+            });
+        });
+    </script>
+<!--</div>-->
+
+
+<div class="content">
+    <div id="container"></div>
+
+
+    <ul id="descriptions">
+        <li><h2 id="sun"><img src="img/iconSun.png" alt="sun" class="small">The Sun</h2>
+            <p>The Sun is a star, a hot ball of glowing gases at the heart of our solar system. Its influence extends
+                far beyond the orbits of distant Neptune and Pluto. Without the Sun's intense energy and heat, there
+                would be no life on Earth. And though it is special to us, there are billions of stars like our Sun
+                scattered across the Milky Way galaxy.</p>
+        </li>
+
+        <li>
+            <h2 id="mercury"><img src="img/iconMercury.png" alt="Mercury">Mercury</h2>
+            <p>Sun-scorched Mercury is only slightly larger than Earth's Moon. Like the Moon, Mercury has very little
+                atmosphere to stop impacts and it is covered with craters. Mercury's dayside is super heated by the Sun,
+                but at night temperatures drop hundreds of degrees below freezing. Ice may even exist in craters.
+                Mercury's egg-shaped orbit takes it around the Sun every 88 days.</p>
+        </li>
+
+        <li>
+            <h2 id="venus"><img src="img/iconVenus.png" alt="Venus" >Venus</h2>
+            <p>Venus is a dim world of intense heat and volcanic activity. Similar in structure and size to Earth,
+                Venus' thick, toxic atmosphere traps heat in a runaway 'greenhouse effect.' The scorched world has
+                temperatures hot enough to melt lead. Glimpses below the clouds reveal volcanoes and deformed mountains.
+                Venus spins slowly in the opposite direction of most planets.</p>
+        </li>
+
+        <li>
+            <h2 id="earth"><img src="img/iconEarth.png" alt="Earth">Earth</h2>
+            <p>Earth is an ocean planet. Our home world's abundance of water - and life - makes it unique in our solar
+                system. Other planets, plus a few moons, have ice, atmospheres, seasons and even weather, but only on
+                Earth does the whole complicated mix come together in a way that encourages life - and lots of it.</p>
+        </li>
+
+        <li>
+            <h2 id="mars"><img src="img/iconMars.png" alt="Mars">Mars</h2>
+            <p>Though details of Mars' surface are difficult to see from Earth, telescope observations show seasonally
+                changing features and white patches at the poles. For decades, people speculated that bright and dark
+                areas on Mars were patches of vegetation, that Mars could be a likely place for life-forms, and that
+                water might exist in the polar caps. When the Mariner 4 spacecraft flew by Mars in 1965, many were
+                shocked to see photographs of a bleak, cratered surface. </p>
+        </li>
+
+        <li>
+            <h2 id="jupiter"><img src="img/iconJupiter.png" alt="Jupiter">Jupiter</h2>
+            <p>The most massive planet in our solar system, with four large moons and many smaller moons, Jupiter forms
+                a kind of miniature solar system. Jupiter resembles a star in composition. In fact, if it had been about
+                80 times more massive, it would have become a star rather than a planet.</p>
+        </li>
+
+        <li>
+            <h2 id="saturn"><img src="img/iconSaturn.png" alt="Saturn">Saturn</h2>
+            <p>Saturn was the most distant of the five planets known to the ancients. Like Jupiter, Saturn is made
+                mostly of hydrogen and helium. Its volume is 755 times greater than that of Earth. Winds in the upper
+                atmosphere reach 500 meters (1,600 feet) per second in the equatorial region. These super-fast winds,
+                combined with heat rising from within the planet's interior, cause the yellow and gold bands visible in
+                the atmosphere.</p>
+        </li>
+
+        <li>
+            <h2 id="uranus"><img src="img/iconUranus.png" alt="Uranus">Uranus</h2>
+            <p>The first planet found with the aid of a telescope, Uranus was discovered in 1781 by astronomer William
+                Herschel. The seventh planet from the Sun is so distant that it takes 84 years to complete one
+                orbit.</p>
+        </li>
+
+        <li>
+            <h2 id="neptune"><img src="img/iconNeptune.png" alt="Mercury">Neptune</h2>
+            <p>Nearly 4.5 billion kilometers (2.8 billion miles) from the Sun, Neptune orbits the Sun once every 165
+                years. It is invisible to the naked eye because of its extreme distance from Earth. Interestingly, the
+                unusual elliptical orbit of the dwarf planet Pluto brings Pluto inside Neptune's orbit for a 20-year
+                period out of every 248 Earth years</p>
+        </li>
+    </ul>
+
+</div>
+<script>
+
+
+
+
+    Highcharts.createElement('link', {
+        href: '',
+        rel: 'stylesheet',
+        type: 'text/css'
+    }, null, document.getElementsByTagName('head')[0]);
+
+    Highcharts.theme = {
+        colors: ['#2b908f', '#90ee7e', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066',
+            '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+        chart: {
+            backgroundColor: {
+                linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+                stops: [
+                    [0, '#2a2a2b'],
+                    [1, '#3e3e40']
+                ]
+            },
+            style: {
+                fontFamily: 'sans-serif'
+            },
+            plotBorderColor: '#606063'
+        },
+        title: {
+            style: {
+                color: '#E0E0E3',
+                textTransform: 'uppercase',
+                fontSize: '14px'
+            }
+        },
+        subtitle: {
+            style: {
+                color: '#E0E0E3',
+                textTransform: 'uppercase'
+            }
+        },
+        xAxis: {
+            gridLineColor: '#707073',
+            labels: {
+                style: {
+                    color: '#E0E0E3'
+                }
+            },
+            lineColor: '#707073',
+            minorGridLineColor: '#505053',
+            tickColor: '#707073',
+            title: {
+                style: {
+                    color: '#A0A0A3'
+
+                }
+            }
+        },
+        yAxis: {
+            gridLineColor: '#707073',
+            labels: {
+                style: {
+                    color: '#E0E0E3'
+                }
+            },
+            lineColor: '#707073',
+            minorGridLineColor: '#505053',
+            tickColor: '#707073',
+            tickWidth: 1,
+            title: {
+                style: {
+                    color: '#A0A0A3'
+                }
+            }
+        },
+        tooltip: {
+            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            style: {
+                color: '#F0F0F0'
+            }
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    color: '#B0B0B3'
+                },
+                marker: {
+                    lineColor: '#333'
+                }
+            },
+            boxplot: {
+                fillColor: '#505053'
+            },
+            candlestick: {
+                lineColor: 'white'
+            },
+            errorbar: {
+                color: 'white'
+            }
+        },
+        legend: {
+            itemStyle: {
+                color: '#E0E0E3'
+            },
+            itemHoverStyle: {
+                color: '#FFF'
+            },
+            itemHiddenStyle: {
+                color: '#606063'
+            }
+        },
+        credits: {
+            style: {
+                color: '#666'
+            }
+        },
+        labels: {
+            style: {
+                color: '#707073'
+            }
+        },
+
+        drilldown: {
+            activeAxisLabelStyle: {
+                color: '#F0F0F3'
+            },
+            activeDataLabelStyle: {
+                color: '#F0F0F3'
+            }
+        },
+
+        navigation: {
+            buttonOptions: {
+                symbolStroke: '#DDDDDD',
+                theme: {
+                    fill: '#505053'
+                }
+            }
+        },
+
+        // scroll charts
+        rangeSelector: {
+            buttonTheme: {
+                fill: '#505053',
+                stroke: '#000000',
+                style: {
+                    color: '#CCC'
+                },
+                states: {
+                    hover: {
+                        fill: '#707073',
+                        stroke: '#000000',
+                        style: {
+                            color: 'white'
+                        }
+                    },
+                    select: {
+                        fill: '#000003',
+                        stroke: '#000000',
+                        style: {
+                            color: 'white'
+                        }
+                    }
+                }
+            },
+            inputBoxBorderColor: '#505053',
+            inputStyle: {
+                backgroundColor: '#333',
+                color: 'silver'
+            },
+            labelStyle: {
+                color: 'silver'
+            }
+        },
+
+        navigator: {
+            handles: {
+                backgroundColor: '#666',
+                borderColor: '#AAA'
+            },
+            outlineColor: '#CCC',
+            maskFill: 'rgba(255,255,255,0.1)',
+            series: {
+                color: '#7798BF',
+                lineColor: '#A6C7ED'
+            },
+            xAxis: {
+                gridLineColor: '#505053'
+            }
+        },
+
+        scrollbar: {
+            barBackgroundColor: '#808083',
+            barBorderColor: '#808083',
+            buttonArrowColor: '#CCC',
+            buttonBackgroundColor: '#606063',
+            buttonBorderColor: '#606063',
+            rifleColor: '#FFF',
+            trackBackgroundColor: '#404043',
+            trackBorderColor: '#404043'
+        },
+
+        // special colors for some of the
+        legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+        background2: '#505053',
+        dataLabelsColor: '#B0B0B3',
+        textColor: '#C0C0C0',
+        contrastTextColor: '#F0F0F3',
+        maskColor: 'rgba(255,255,255,0.3)'
+    };
+
+
+    // Apply the theme
+    Highcharts.setOptions(Highcharts.theme);
+
+
+
+
+
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline',
+            inverted: false
+        },
+        title: {
+            text: 'Solar System: Mass and Distance'
+        },
+        subtitle: {
+            text: 'The distance from Earth to the Sun is 1 AU (Astronomical Unit)'
+        },
+        xAxis: {
+            reversed: false,
+            title: {
+                enabled: true,
+                text: 'Planetary Mass (1 Mass=1.9884×10^30kg)'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + 'Mass';
+                }
+            },
+            maxPadding: 0.05,
+            showLastLabel: true
+        },
+        yAxis: {
+            title: {
+                text: '1 AU = 150,000,000km'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + 'AU';
+                }
+            },
+            lineWidth: 2
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            headerFormat: '<b>{point.key}</b><br/>',
+            pointFormat: '{point.x} mass: {point.y} au '
+        },
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: true,
+                    symbol: 'circle',
+                    radius: 7
+                }
+            }
+        },
+        series: [{
+            data: [{name: 'Mercury',  x: 330,y: 0.4}, {name: 'Venus', x: 4868, y: 0.7}, {
+                name: 'Earth', x: 5973, y: 1}, {name: 'Mars', x: 641, y: 1.5}, {name: 'Jupiter', x:1898600, y:5.2}, {
+                name: 'Saturn',
+                x:568460, y:9.5 }, {name: 'Uranus', x:68340, y:19.2}, {name: 'Neptune', x:62540, y:30.1}]
+        }]
+    });
+
+
+</script>
+</body>
+</html>

@@ -22,16 +22,7 @@ li{
     background-color: #010141;
 }
 
-/*h1{*/
-    /*font-family:'Coming Soon', cursive;*/
-    /*color: #0201c2;*/
-    /*z-index: 9;*/
-    /*margin-left:40%;*/
-    /*margin-top:20px;*/
-    /*float:right;*/
-    /*position: absolute;*/
-    /*font-size: 3em;*/
-/*}*/
+
 
 .menu-bar{
     margin-left:20px;
@@ -39,8 +30,6 @@ li{
     display: inline-block;
     cursor: pointer;
     float:left;
-    /*position: absolute;*/
-    /*background-color: rgba(1, 1, 65, 0.6);*/
     z-index: 9;
 }
 
@@ -171,6 +160,11 @@ nav{
     display: inline-block;
     cursor: pointer;
     z-index: 999;
+}
+
+#idlogin{
+    color: #36afff;
+    padding-top: 8px;
 }
 
 

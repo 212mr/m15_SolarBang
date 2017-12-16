@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-<link rel="stylesheet" href="css/paintcss.css" type="text/css" media="screen" title="no title" charset="utf-8">
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<title>Solar BANG!</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+	<link rel="icon" href="img/iconSaturn.png">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Coming+Soon|Fredericka+the+Great|Sacramento" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/paintcss.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+			src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+			integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+			crossorigin="anonymous"></script>
 </head>
 <body>
-		
-	<canvas	 id="myCanvas" width="590" height="290"></canvas>
+<div class="menu-bar" onclick="myFunction(this)">
+	<div class="bar1"></div>
+	<div class="bar2"></div>
+	<div class="bar3"></div>
+</div>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+<div class="nav">
+	<nav>
+		<ul>
+			<li class="link"><a href="intro.html"><i class="fa fa-list-alt"></i></a></li>
+			<br>
+			<li class="link"><a href="paint.html"><i class="fa fa-edit"></i></a></li>
+			<br>
+			<li class="link"><a href="order.html"><i class="fa fa-spinner"></i></a></li>
+			<br>
+			<li class="link"><a href="gameDrag.html"><i class="fa fa-bullseye"></i></a></li>
+		</ul>
+	</nav>
+</div>
+
+	<canvas	 id="myCanvas" width="590" height="230"></canvas>
+<div class="refresh">
+	<ul>
+		<li>
+			<a href=""><i id="refreshBtn" class="fa fa-rotate-right"></i></a>
+		</li>
+	</ul>
+</div>
+
 		<div class="controls">
-           <div id="buttons">
-               <input type="button" id="clear" value="Clear">
-          </div>
+           <!--<div id="buttons">-->
+               <!--<input type="button" id="clear" value="Clear">-->
+          <!--</div>-->
 		     
 			<ul>
-
 					<li class="red selected"></li>
 					<li class="blue"></li>
 					<li class="yellow"></li>
-
 			</ul>
-				<button id="revealColorSelect">New Color</button>
+
+				<!--<button id="revealColorSelect">New Color</button>-->
 				<div id="colorSelect"> <span id="newColor"></span>
 				<div class="sliders">
 		     <p>
@@ -45,7 +87,19 @@
 <script src="js/paintjs.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
+
+    $(document).ready(function () {
+        $("div.menu-bar").click(function () {
+            $("div.nav").toggle("slide");
+        });
+        $('#refreshBtn').click(function() {
+            location.reload();
+        });
+    });
+
+
+
+var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36251023-1']);
   _gaq.push(['_setDomainName', 'jqueryscript.net']);
   _gaq.push(['_trackPageview']);
@@ -57,6 +111,35 @@
   })();
 
 </script>
+
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
+
+
+<script>
+	$(function(){
+	var startdrag= false;
+	$("#a").on(TouchMouseEvent.DOWN, function(){
+	startdrag= true;
+	move();
+
+	});
+	function move(){
+
+	$("#a").on(TouchMouseEvent.MOVE, function(e){
+	if(startdrag){
+	$(this).css('left',(e.pageX-50)) ;
+	$(this).css('top',(e.pageY-50));
+	}
+	});
+
+	}
+	$("#a").on(TouchMouseEvent.UP, function(e){
+	startdrag= false;
+
+	});
+
+	});
+    </script>
+
 </body>
 </html>

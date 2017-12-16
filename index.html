@@ -32,6 +32,18 @@
     </script>
 
     <script type="text/javascript" src="js/indexjs.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110573693-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110573693-2');
+    </script>
+
+
 </head>
 <body>
 
@@ -50,14 +62,15 @@
     <div class="nav">
         <nav>
             <ul>
-                <li class="link"><a href="paint.html"><i class="fa fa-universal-access"></i></a></li>
-                <li class="link"><a href="order.html"><i class="fa fa-rocket"></i></a></li>
-                <li class="link"><a href="gameDrag.html"><i class="fa fa-spinner"></i></a></li>
+                <li class="link"><a href="intro.html"><i class="fa fa-list-alt"></i></a></li>
+                <li class="link"><a href="paint2.html"><i class="fa fa-edit"></i></a></li>
+                <li class="link"><a href="order.html"><i class="fa fa-spinner"></i></a></li>
+                <li class="link"><a href="gameDrag.html"><i class="fa fa-bullseye"></i></a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="login" align="center">
+    <div id="idlogin" class="login" align="center">
         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
         <div id="id01" class="modal" align="left">

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solar BANG!</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <link rel="icon" href="img/iconSaturn.png">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Fredericka+the+Great|Sacramento" rel="stylesheet">
+    <link href="css/paint2css.css" rel="stylesheet"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+            integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+            crossorigin="anonymous"></script>
+    <script src="js/paint2js.js"></script>
+</head>
+<body>
+<div class="menu-bar" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+<div class="nav">
+    <nav>
+        <ul>
+            <li class="link"><a href="intro.html"><i class="fa fa-list-alt"></i></a></li>
+            <li class="link"><a href="paint2.html"><i class="fa fa-edit"></i></a></li>
+            <li class="link"><a href="order.html"><i class="fa fa-spinner"></i></a></li>
+            <li class="link"><a href="gameDrag.html"><i class="fa fa-bullseye"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<script >
+    $(document).ready(function () {
+        $("div.menu-bar").click(function () {
+            $("div.nav").toggle("slide");
+        });
+    });
+</script>
+<div id="iframe">
+    <canvas id="canvas" width="600px" height="260px"></canvas>
+    <!--<input type="submit" value="Clear Canvas" id="clearbutton" onclick="clearCanvas(canvas,ctx);">-->
+</div>
+
+<div class="refresh">
+    <ul>
+        <li>
+            <a href=""><i id="refreshBtn" class="fa fa-rotate-right"></i></a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

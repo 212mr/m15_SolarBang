@@ -1,0 +1,100 @@
+body{
+    background-size: cover;
+    background-image: url("../img/background_ab.png");
+}
+
+#iframe {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#canvas {
+    border:2px solid #000000;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+
+
+
+
+li{
+    list-style: none;
+}
+
+
+
+
+.menu-bar{
+    margin-left:20px;
+    margin-top:10px;
+    display: inline-block;
+    cursor: pointer;
+    float:left;
+    /*position: absolute;*/
+    /*background-color: rgba(1, 1, 65, 0.6);*/
+    z-index: 9;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav {
+    display: none;
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 20px;
+    z-index: 9;
+    float: right;
+}
+
+.nav a{
+    color: white;
+}
+
+.nav a:hover{
+    color: #0201c2;
+}
+
+nav{
+    /*display: none;*/
+    color: white;
+    font-size: 3em;
+}
+
+
+#refreshBtn{
+    color: white;
+    font-size: 2.6em;
+    position: absolute;
+    bottom:10px;
+    left:22px;
+}
+
+#refreshBtn a{
+    color: white;
+}
+
+#refreshBtn a:hover {
+    color: #0201c2;
+}

@@ -61,16 +61,37 @@ function handleSignIn() {
     var password = document.getElementById('form-password').value;
     firebase.auth().signInWithEmailAndPassword(email, password).then(
         function () {
+
+            var user = firebase.auth().currentUser;
+            var name, email, photoUrl, uid, emailVerified;
+
+            if (user != null) {
+                name = user.displayName;
+                email = user.email;
+                photoUrl = user.photoURL;
+                emailVerified = user.emailVerified;
+                uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                                 // this value to authenticate with your backend server, if
+                                 // you have one. Use User.getToken() instead.
+            }
             //only if successfully signed in and control flow gets here
             //window.location.href=""
+
             console.log('signed IN!');
             alert("Sign IN");
+
+            document.getElementById("idlogin").innerHTML = email;
+
+
         }).catch(
         //if there was an error
         function (error) {
             alert("Sign In" + error.message);
         }
     );
+
+
+
 }
 
 function handleSignOut() {
@@ -112,6 +133,14 @@ function handleFBLogin() {
         alert('user is FB');
     }
 }
+
+
+
+
+
+
+
+
 
 
 
